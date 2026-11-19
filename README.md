@@ -67,3 +67,8 @@ Canlı Failover Test Adımları
 Test A (Normal Çalışma): proje25-vault konteyneri açıkken /hibrit-db-test isteği gönderilir. Yanıtta "aktif_secret_kaynagi": "HashiCorp Vault (Primary - Self-Hosted)" ve "failover_durumu": false döner.
 
 Test B (Felaket Kurtarma / Failover): docker stop proje25-vault komutu ile birincil kasa durdurulur ve tekrar istek gönderilir. Uygulama 2 saniyelik zaman aşımı sonrası buluta geçerek "aktif_secret_kaynagi": "Azure Key Vault (Secondary - Cloud Fallback)" ve "failover_durumu": true yanıtıyla veritabanı bağlantısını kesintisiz sürdürür.
+
+## Sistem Mimarisi
+![Sistem Mimarisi Diyagramı](mimari-diyagram.png)
+
+📄 **Detaylı Proje Raporu (PDF):** [Kapsamlı Proje Raporunu Görüntüle / İndir](hibrit_secret_management_kapsamli_rapor.docx)
